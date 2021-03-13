@@ -1,0 +1,47 @@
+.count {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__body {
+    padding: 10px;
+  }
+
+  &__number {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  &__balance {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+
+    &--text {
+      font-size: 15px;
+    }
+  }
+
+  &__currency {
+    font-size: 15px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: dimgrey;
+      text-decoration: underline;
+    }
+
+  }
+}

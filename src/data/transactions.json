@@ -1,0 +1,36 @@
+{
+  "ua000000000000000000000000111": [
+    {
+      "date": "",
+      "summa": 100,
+      "withdraw": true
+    },
+    {
+      "date": "",
+      "summa": 200,
+      "withdraw": true
+    },
+    {
+      "date": "",
+      "summa": 300,
+      "withdraw": true
+    }
+  ],
+  "ua000000000000000000000000112": [
+    {
+      "date": "",
+      "summa": 500,
+      "withdraw": true
+    },
+    {
+      "date": "",
+      "summa": 200,
+      "withdraw": true
+    },
+    {
+      "date": "",
+      "summa": 300,
+      "withdraw": true
+    }
+  ]
+}
