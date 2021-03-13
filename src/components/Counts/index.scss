@@ -1,0 +1,17 @@
+.counts {
+  &__add {
+    padding-top: 15px;
+
+    & button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+      &:active{
+        box-shadow: inset 0 0 5px 0 #000;
+        background-color: #e0e0e0;
+      }
+    }
+  }
+}

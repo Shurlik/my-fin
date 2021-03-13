@@ -1,8 +1,7 @@
 .countCreate {
-  padding: 5px;
 
   &__input {
-    padding: 5px;
+    padding: 15px;
 
     &--name input, &--uuid input {
       text-align: center;
@@ -19,7 +18,6 @@
     }
   }
 
-
   &__submit {
     text-align: center;
     padding: 10px;
@@ -30,7 +28,7 @@
       font-size: 15px;
     }
 
-    & input {
+    & input, & button {
       border: none;
       outline: none;
       border-radius: 10px;

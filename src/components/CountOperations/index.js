@@ -1,8 +1,13 @@
 import React from 'react';
 
-const CountOperations = () => {
+const CountOperations = ({obj}) => {
+    console.log(obj)
+
     return (
-        <div>
+        <div className={"overlay"}>
+            <div className="overlay__inner">
+
+            </div>
             
         </div>
     );
