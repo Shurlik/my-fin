@@ -10,6 +10,10 @@ const Count = ({ uuid, balance, name, currency }) => {
         setShowOperations(false);
     }
 
+    const countBtnAction=()=>{
+        setShowOperations(true)
+    }
+
     return (
         <div className="count">
             <div className="count__title">{name}</div>
@@ -23,7 +27,8 @@ const Count = ({ uuid, balance, name, currency }) => {
                     <span className={"count__currency"}>&nbsp;{currency}</span>
                 </div>
             </div>
-            {showOperations && <CountOperations close={closeShowOperations} obj={this}/>}
+            {showOperations && <CountOperations close={closeShowOperations} uuid={uuid}/>}
+            <button className={"count__btn"} onClick={countBtnAction}>Operations</button>
         </div>
     );
 };

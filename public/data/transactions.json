@@ -4,21 +4,21 @@
       "id": 1,
       "date": 1615639201425,
       "sum": 100,
-      "withdraw": true,
+      "withdraw": false,
       "comment": ""
     },
     {
       "id": 2,
       "date": 1615639294569,
       "sum": 200,
-      "withdraw": true,
+      "withdraw": false,
       "comment": ""
     },
     {
       "id": 3,
       "date": 1615639310858,
       "sum": 300,
-      "withdraw": true,
+      "withdraw": false,
       "comment": ""
     }
   ],
@@ -27,21 +27,21 @@
       "id": 1,
       "date": 1615639318192,
       "sum": 500,
-      "withdraw": true,
+      "withdraw": false,
       "comment": ""
     },
     {
       "id": 2,
       "date": 1615639325677,
       "sum": 200,
-      "withdraw": true,
+      "withdraw": false,
       "comment": ""
     },
     {
       "id": 3,
       "date": 1615639333912,
       "sum": 300,
-      "withdraw": true,
+      "withdraw": false,
       "comment": ""
     }
   ]

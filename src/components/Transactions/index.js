@@ -2,7 +2,7 @@ import React from 'react';
 import "./index.scss"
 const Transactions = ({transaction}) => {
     const {withdraw, sum, date, comment} = transaction;
-    const label = withdraw ? "IN" : "OUT";
+    const label = withdraw ? "OUT" : "IN";
     let [sDate, sTime] = new Date(date).toISOString().split("T");
     sTime = sTime.split(".")[0];
 

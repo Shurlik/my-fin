@@ -17,8 +17,6 @@ const Counts = () => {
         setShowCreation(false);
     }
 
-
-
     const countsItems = counts.map((count) => {
         return (
             <Count
