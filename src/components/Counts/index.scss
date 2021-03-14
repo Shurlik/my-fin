@@ -1,17 +1,29 @@
 .counts {
-  &__add {
-    padding-top: 15px;
+    &__add {
+        padding-top: 15px;
+        border-bottom: 1px solid #fff;
 
-    & button {
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 5px 10px;
-      border-radius: 5px;
-      &:active{
-        box-shadow: inset 0 0 5px 0 #000;
-        background-color: #e0e0e0;
-      }
+        & button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+
+            &:active {
+                box-shadow: inset 0 0 5px 0 #000;
+                background-color: #e0e0e0;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
-  }
+    & h2 {
+        margin: 0;
+        border-bottom: 1px solid #fff;
+        padding: 10px;
+    }
 }

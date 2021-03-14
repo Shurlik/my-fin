@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import CountDetailed from "../components/CountDetailed"
-import Counts from "../components/Counts"
+import CountDetailed from "../components/CountDetailed";
+import Counts from "../components/Counts";
 
 export default function Router() {
     return (
@@ -9,7 +9,7 @@ export default function Router() {
             <Switch>
                 <Route exact path="/" component={Counts} />
                 <Route exact path="/:name" component={CountDetailed} />
-                <Redirect exact from='*' to='/' />
+                <Redirect exact from="*" to="/" />
             </Switch>
         </>
     );

@@ -1,10 +1,33 @@
 .countOperations {
-&__textarea{
-  resize: none;
-  width: 300px;
-  height: 100px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-}
+    &__sum {
+        font-weight: bold;
+        font-size: 30px;
+        padding: 5px;
+        border-bottom: 2px solid #fff;
+
+        &--title {
+            border-top: 2px solid #fff;
+            padding-top: 15px;
+        }
+    }
+
+    &__input {
+        &--title {
+            padding: 15px 0 5px;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        width: 300px;
+        height: 100px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 10px;
+
+        &--title {
+            padding: 15px 0 5px;
+        }
+    }
 }

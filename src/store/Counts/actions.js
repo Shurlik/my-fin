@@ -1,24 +1,24 @@
-import axios from "axios"
+import axios from "axios";
 
-export const SAVE_COUNTS = "SAVE_COUNTS"
-export const SAVE_TRANSACTIONS = "SAVE_TRANSACTIONS"
-export const COUNTS_LOADED = "COUNTS_LOADED"
-export const TRANSACTIONS_LOADED = "TRANSACTIONS_LOADED"
-const API = "../../data"
+export const SAVE_COUNTS = "SAVE_COUNTS";
+export const SAVE_TRANSACTIONS = "SAVE_TRANSACTIONS";
+export const COUNTS_LOADED = "COUNTS_LOADED";
+export const TRANSACTIONS_LOADED = "TRANSACTIONS_LOADED";
+const API = "../../data";
 
-export const loadCounts = () => (dispatch) => {
+export const loadCounts = () => (dispatch) => { // Getting data from Source, It's in /Public/Data now
     countsLoaded(false);
     axios(API + "/counts.json")
-        .then(res => dispatch(saveCounts(res.data)))
-        .then(() => dispatch(countsLoaded(true)))
-}
+        .then((res) => dispatch(saveCounts(res.data)))
+        .then(() => dispatch(countsLoaded(true)));
+};
 
 export const loadTransactions = () => (dispatch) => {
-    transactionsLoaded(false)
+    transactionsLoaded(false);
     axios(API + "/transactions.json")
-        .then(res => dispatch(saveTransactions(res.data)))
-        .then(() => dispatch(transactionsLoaded(true)))
-}
+        .then((res) => dispatch(saveTransactions(res.data)))
+        .then(() => dispatch(transactionsLoaded(true)));
+};
 
 export const saveCounts = (counts) => (dispatch) => {
     dispatch({

@@ -1,21 +1,21 @@
-import React, {useState} from "react";
+// Shows list of Counts
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import Count from "../Count";
-import {useSelector} from "react-redux";
 import CountCreation from "../CountCreation";
-
-import "./index.scss"
+import "./index.scss";
 
 const Counts = () => {
     const counts = useSelector((state) => state.countsData.counts);
-    const [showCreation, setShowCreation] = useState(false)
+    const [showCreation, setShowCreation] = useState(false);
 
     const addCountBtn = () => {
-        setShowCreation(true)
-    }
+        setShowCreation(true);
+    };
 
     const closeShowCreation = () => {
         setShowCreation(false);
-    }
+    };
 
     const countsItems = counts.map((count) => {
         return (
@@ -31,12 +31,12 @@ const Counts = () => {
     });
     return (
         <div className={"counts"}>
-            {countsItems}
             <div className="counts__add">
                 <button onClick={addCountBtn}>Create new count</button>
             </div>
-            {showCreation && <CountCreation close={closeShowCreation}/>}
-
+            <h2>Your Counts:</h2>
+            {countsItems}
+            {showCreation && <CountCreation close={closeShowCreation} />}
         </div>
     );
 };

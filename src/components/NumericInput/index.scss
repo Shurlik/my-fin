@@ -1,33 +1,33 @@
 .numeric {
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 5px;
-  height: 2em;
-  text-align: center;
-  box-sizing: border-box;
-
-  &__btn {
-    height: 100%;
-    width: 30px;
-    cursor: pointer;
-    font-size: 20px;
-    background-color: lightgreen;
-    outline: none;
-    border: none;
-
-    &:active{
-      background-color: darkgreen;
-    }
-  }
-
-  &__input {
-    height: 100%;
-    width: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 2em;
     text-align: center;
-    border: none;
-    outline: none;
-    font-weight: bold;
-    font-size: 17px;
-    background-color: lightgrey;
-  }
+    box-sizing: border-box;
+
+    &__btn {
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: lightgreen;
+        outline: none;
+        border: none;
+
+        &:active {
+            background-color: darkgreen;
+        }
+    }
+
+    &__input {
+        height: 100%;
+        width: 100px;
+        text-align: center;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-size: 17px;
+        background-color: lightgrey;
+    }
 }

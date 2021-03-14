@@ -1,18 +1,29 @@
-import React, {useState} from "react";
-import "./index.scss";
+// Component for prepare each Count to list in Counts component
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CountOperations from "../CountOperations";
+import "./index.scss";
 
 const Count = ({ uuid, balance, name, currency }) => {
-    const [showOperations, setShowOperations] = useState(false)
+    const [showPutOperations, setShowPutOperations] = useState(false);
+    const [showWithdrawOperations, setShowWithdrawPutOperations] = useState(
+        false
+    );
 
-    const closeShowOperations = () => {
-        setShowOperations(false);
-    }
+    const closeShowPutOperations = () => {
+        setShowPutOperations(false);
+    };
 
-    const countBtnAction=()=>{
-        setShowOperations(true)
-    }
+    const countBtnActionPut = () => {
+        setShowPutOperations(true);
+    };
+    const closeShowWithdrawOperations = () => {
+        setShowWithdrawPutOperations(false);
+    };
+
+    const countBtnActionWithdraw = () => {
+        setShowWithdrawPutOperations(true);
+    };
 
     return (
         <div className="count">
@@ -27,8 +38,29 @@ const Count = ({ uuid, balance, name, currency }) => {
                     <span className={"count__currency"}>&nbsp;{currency}</span>
                 </div>
             </div>
-            {showOperations && <CountOperations close={closeShowOperations} uuid={uuid}/>}
-            <button className={"count__btn"} onClick={countBtnAction}>Operations</button>
+            {showPutOperations && ( //show modal with adding money
+                <CountOperations
+                    close={closeShowPutOperations}
+                    uuid={uuid}
+                    operation={true}
+                />
+            )}
+            {showWithdrawOperations && ( //show modal with getting money
+                <CountOperations
+                    close={closeShowWithdrawOperations}
+                    uuid={uuid}
+                    operation={false}
+                />
+            )}
+            <button className={"count__btn btn"} onClick={countBtnActionPut}>
+                Put
+            </button>
+            <button
+                className={"count__btn btn"}
+                onClick={countBtnActionWithdraw}
+            >
+                Withdraw
+            </button>
         </div>
     );
 };
