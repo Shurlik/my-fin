@@ -7,7 +7,6 @@ import "./index.scss";
 
 const CountDetailed = ({match}) => {
 
-
     const count = useSelector((state) => state.countsData.counts).find(
         (count) => count.name === match.params.name
     );
@@ -17,17 +16,13 @@ const CountDetailed = ({match}) => {
     );
     if (!count) {
         return (
-            <>
-                <div className={"countDetailed__error"}>Sorry, but this Count was not found
+            <div className={"countDetailed__error"}>Sorry, but this Count was not found
                 <Link className="countDetailed--return" to={`/`}>
                     <div>
-                    <span className={"countDetailed__link"}>
-                        -- Return to Main page --
-                    </span>
+                        <span className={"countDetailed__link"}>-- Return to Main page --</span>
                     </div>
                 </Link>
-                </div>
-            </>
+            </div>
         )
     }
 
