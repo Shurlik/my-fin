@@ -29,7 +29,7 @@ const Count = ({ uuid, balance, name, currency }) => {
         <div className="count">
             <div className="count__title">{name}</div>
             <div className={"count__body"}>
-                <Link className={"count__link"} to={`/${name}`}>
+                <Link className={"count__link"} to={`/counts/${name}`}>
                     <div className="count__number">{uuid}</div>
                 </Link>
                 <div className="count__balance">

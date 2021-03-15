@@ -7,8 +7,9 @@ export default function Router() {
     return (
         <>
             <Switch>
-                <Route exact path="/" component={Counts} />
-                <Route exact path="/:name" component={CountDetailed} />
+                <Redirect exact from='/' to='/counts' />
+                <Route exact path="/counts" component={Counts} />
+                <Route exact path="/counts/:name" component={CountDetailed} />
                 <Redirect exact from="*" to="/" />
             </Switch>
         </>

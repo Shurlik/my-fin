@@ -37,7 +37,7 @@ const CountOperations = ({ uuid, close, operation }) => {
             : 1;
         tmpTransaction.date = new Date().getTime(); // Date in ms
         tmpTransaction.sum = sum;
-        tmpTransaction.withdraw = !operation; // check for Put or Get money
+        tmpTransaction.withdraw = !operation; // check for Put or Take money
         tmpTransaction.comment = comment;
         if (operation) {
             count.balance += +sum;
@@ -67,7 +67,7 @@ const CountOperations = ({ uuid, close, operation }) => {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <p className="countOperations__input--title">
-                            Enter you sum:
+                            Enter your sum:
                         </p>
                         <NumericInput
                             min={0}

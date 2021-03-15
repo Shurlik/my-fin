@@ -2,13 +2,13 @@
   {
     "uuid": "ua000000000000000000000000111",
     "balance": 600,
-    "name": "Main",
+    "name": "main",
     "currency": "uah"
   },
   {
     "uuid": "ua000000000000000000000000112",
     "balance": 1000,
-    "name": "Second",
+    "name": "second",
     "currency": "uah"
   }
 ]
