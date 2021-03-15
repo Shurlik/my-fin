@@ -1,11 +1,13 @@
 // Component show single Count info with transactions
 import React from "react";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
 import Transactions from "../Transactions";
 import "./index.scss";
 
-const CountDetailed = ({ match }) => {
+const CountDetailed = ({match}) => {
+
+
     const count = useSelector((state) => state.countsData.counts).find(
         (count) => count.name === match.params.name
     );
@@ -13,15 +15,30 @@ const CountDetailed = ({ match }) => {
     const transactionsLoaded = useSelector(
         (state) => state.countsData.transactionsLoaded
     );
+    if (!count) {
+        return (
+            <>
+                <div className={"countDetailed__error"}>Sorry, but this Count was not found
+                <Link className="countDetailed--return" to={`/`}>
+                    <div>
+                    <span className={"countDetailed__link"}>
+                        -- Return to Main page --
+                    </span>
+                    </div>
+                </Link>
+                </div>
+            </>
+        )
+    }
 
     const currentTransactions =
         transactionsLoaded && transactions[count.uuid] !== undefined
             ? transactions[count.uuid].map((transaction) => (
-                  <Transactions
-                      transaction={transaction}
-                      key={transaction.id}
-                  />
-              ))
+                <Transactions
+                    transaction={transaction}
+                    key={transaction.id}
+                />
+            ))
             : "";
 
     return (
